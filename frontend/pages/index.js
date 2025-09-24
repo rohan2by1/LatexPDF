@@ -25,8 +25,8 @@ export default function Home() {
     <div style={{ padding: "2rem" }}>
       <h2>LaTeX → PDF (XeLaTeX via Render + Vercel)</h2>
       <textarea
-        rows={12}
-        cols={70}
+        rows={1000}
+        cols={200}
         value={latex}
         onChange={(e) => setLatex(e.target.value)}
       />
