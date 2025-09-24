@@ -1,9 +1,14 @@
 FROM debian:stable-slim
 
-# Install Node.js & XeLaTeX
-RUN apt-get update && \
-    apt-get install -y texlive-xetex texlive-fonts-recommended texlive-latex-extra \
-    nodejs npm && \
+# Install XeLaTeX + popular packages + extra fonts
+RUN apt-get update && apt-get install -y \
+    texlive-xetex \
+    texlive-latex-extra \
+    texlive-fonts-recommended \
+    texlive-fonts-extra \    
+    texlive-latex-recommended \
+    nodejs \
+    npm && \
     apt-get clean
 
 WORKDIR /app
