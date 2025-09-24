@@ -8,7 +8,7 @@ export default function Home() {
 
   async function compile() {
     try {
-      const res = await fetch("https://latex-backend.onrender.com/compile", {
+      const res = await fetch("https://latexpdf-aevm.onrender.com/compile", {
         method: "POST",
         headers: { "Content-Type": "text/plain" },
         body: latex,
